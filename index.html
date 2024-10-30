@@ -72,8 +72,14 @@
         }
 
         function preImg(){
-            --index;
-            slide.src=image[index]
+            if(index > 0)
+              {
+                index--;
+              }
+            else{
+                index = image.length - 1;
+            }  
+            slide.src=image[index]  
         }
     </script> 
 </body>
