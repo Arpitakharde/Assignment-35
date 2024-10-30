@@ -20,7 +20,7 @@
 
         }
         .symbols{
-            height: 70px;
+            height: 60px;
             position: absolute;
             top:40%;
             cursor: pointer;
@@ -47,10 +47,24 @@
 <body>
     
     <div class="main-box">
-        <img src="./image/ganesha image.jpg" class="slide" />
-        <img src="./image/less.png"     class="symbols  less-sym" />
-        <img src="./image/greater.png"  class="symbols  greater-sym" />
+        <img src="./image/ganesha image.jpg" class="slide" id="slide"/>
+        <img src="./image/less.png"     class="symbols  less-sym"    onclick="preImg()"/>
+        <img src="./image/greater.png"  class="symbols  greater-sym" onclick="nextImg()"/>
     </div>
 
+
+    <script>
+
+        const image=["./image/ganesha image.jpg" , "./image/image1.avif" , "./image/image2.avif" , "./image/image3.jpg",
+                     "./image/image4.avif" , "./image/image5.avif" , "./image/image7.avif" , "./image/image8.avif" ];
+
+        let index=0;
+        const slide=document.getElementById("slide");                     
+        function nextImg(){
+            index++;
+
+            slide.src=image[index]
+        }
+    </script> 
 </body>
 </html>
