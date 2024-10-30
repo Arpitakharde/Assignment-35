@@ -61,9 +61,14 @@
         let index=0;
         const slide=document.getElementById("slide");                     
         function nextImg(){
-            index++;
-
-            slide.src=image[index]
+            if(index < image.length - 1)
+              {
+                index++;
+              }
+            else{
+                index = 0;
+            }  
+            slide.src=image[index]  
         }
 
         function preImg(){
